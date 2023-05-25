@@ -1,6 +1,8 @@
 package com.FST.scolarite.entities;
 
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,8 +17,12 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Administrator {
-    @Id
+public class Administrator implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -6082251642617181261L;
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
